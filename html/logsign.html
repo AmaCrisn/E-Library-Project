@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Masuk | E-Library</title>
+	<link rel=icon href="img/logo.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<!-- Wave Background -->
+	<img class="wave" src="img/wave4.svg">
+	<div class="container">
+		<!-- Icon Image -->
+		<div class="img">
+			<img src="img/1-removebg-preview.png">
+		</div>
+
+		<!-- Login Section -->
+		<div class="login-content">
+			<form id="login-form" class="form">
+				<img src="img/avatar.svg">
+				<h2 class="title">Selamat Datang</h2>
+				<div class="input-div one">
+					<!-- Icon User -->
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<!-- Input Username -->
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" class="input" id="login-username" required placeholder="Username">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<!-- Icon Password -->
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<!-- Input Password -->
+					<div class="div">
+						<h5>Password</h5>
+						<input type="password" class="input" id="login-password" required placeholder="Password">
+					</div>
+				</div>
+				<!-- Change Display Form to Sign Up -->
+				<p>Tidak Memiliki Akun? <a href="#" onclick="showSignupForm()">DAFTAR</a></p>
+				<!-- Button to Submit -->
+				<input type="submit" class="btn" value="Login">
+			</form>
+			<!-- Sign Up Section -->
+			<form id="signup-form" class="form" style="display: none;">
+				<img src="img/avatar.svg">
+				<h2 class="title">Selamat Datang</h2>
+				<div class="input-div one">
+					<!-- Icon User -->
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<!-- Input Username -->
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" class="input" id="signup-username" required placeholder="Username">
+					</div>
+				</div>
+				<div class="input-div one">
+					<!-- Icon Email -->
+					<div class="i">
+						<i class="fas fa-envelope-open"></i>
+					</div>
+					<!-- Input Email -->
+					<div class="div">
+						<h5>Email</h5>
+						<input type="text" class="input" id="signup-email" required placeholder="Email">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<!-- Icon Password -->
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<!-- Input Password -->
+					<div class="div">
+						<h5>Password</h5>
+						<input type="password" class="input" id="signup-password" required placeholder="Password">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<!-- Icon Password -->
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<!-- Input Confirm Password -->
+					<div class="div">
+						<h5>Confirm Password</h5>
+						<input type="password" class="input" id="signup-confirm-password" required
+							placeholder="Confirm Password">
+					</div>
+				</div>
+				<!-- Change Display Form to Log In -->
+				<p>Sudah Memiliki Akun? <a href="#" onclick="showLoginForm()">MASUK</a></p>
+				<!-- Button to Submit -->
+				<input type="submit" class="btn" value="SignUp">
+			</form>
+		</div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
