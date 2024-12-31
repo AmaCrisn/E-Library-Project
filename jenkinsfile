@@ -17,16 +17,6 @@ pipeline {
                 ])
             }
         }
-        stage("Cleanup") {
-            steps {
-                script {
-                    def existingContainer = sh(script: "docker ps -aq --filter name=${env.DOCKER_CONTAINER}", returnStdout: true).trim()
-                    if (existingContainer) {
-                        sh "docker rm -f ${existingContainer}"
-                    }
-                }
-            }
-        }
         stage("Build Docker Image") {
             steps {
                 script {
