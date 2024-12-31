@@ -12,7 +12,8 @@ pipeline{
                 deleteDir()
                 checkout([$class: 'GitSCM',
                     branches: [[name: "main"]],
-                    userRemoteConfigs: [[url: 'https://github.com/AmaCrisn/E-Library-Project.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/AmaCrisn/E-Library-Project.git',
+                    credentialsId: 'df2555e3-e5be-4025-85ed-90840a92ad98']]
                 ])
             }
         }
