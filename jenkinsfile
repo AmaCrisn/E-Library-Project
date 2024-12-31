@@ -10,8 +10,12 @@ pipeline{
         stage("Checkout"){
             steps{
                 deleteDir()
-                // Set Git buffer size to handle large repositories
+                // Debug: Set Git buffer size
                 sh 'git config --global http.postBuffer 524288000'
+                    
+                // Debug: Test repository URL
+                sh 'git ls-remote https://github.com/AmaCrisn/E-Library-Project.git'
+
                 checkout([$class: 'GitSCM',
                     branches: [[name: '*/main']],
                     userRemoteConfigs: [[url: 'https://github.com/AmaCrisn/E-Library-Project.git',
