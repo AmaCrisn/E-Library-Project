@@ -7,16 +7,16 @@ pipeline{
     }
 
     stages{
-        stage("Clone Repository"){
+        stage("Checkout"){
             steps{
                 deleteDir()
                 checkout([$class: 'GitSCM',
-                    branches: [[name: "/main"]],
+                    branches: [[name: "main"]],
                     userRemoteConfigs: [[url: 'https://github.com/AmaCrisn/E-Library-Project.git']]
                 ])
             }
         }
-        stage("build Docker Image"){
+        stage("Build Docker Image"){
             steps{
                 script{
                     docker.build(env.DOCKER_IMAGE)
