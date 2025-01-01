@@ -13,8 +13,7 @@ pipeline {
                 checkout([$class: 'GitSCM',
                     branches: [[name: '*/main']],
                     userRemoteConfigs: [[url: 'https://github.com/AmaCrisn/E-Library-Project.git',
-                    credentialsId: 'df2555e3-e5be-4025-85ed-90840a92ad98']]
-                ])
+                    credentialsId: 'df2555e3-e5be-4025-85ed-90840a92ad98']]])
             }
         }
         stage("Build Docker Image") {
@@ -27,7 +26,7 @@ pipeline {
         stage("Run Docker Container") {
             steps {
                 script {
-                    docker.image(env.DOCKER_IMAGE).run("-d --name ${env.DOCKER_CONTAINER} -p ${env.PORT_MAPPING}")
+                    docker.image(env.DOCKER_IMAGE).run("-d --name ${env.DOCKER_CONTAINER} -p ${env.PORT_MAPPING} -v ${WORKSPACE}:/usr/share/nginx/html")
                 }
             }
         }
